@@ -1,6 +1,5 @@
-const express = require('express');
-const mysql = require('mysql2');
-const connection = require('../db');
+import express from 'express';
+import connection from '../db.js';
 
 const router = express.Router();
 
@@ -51,4 +50,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;

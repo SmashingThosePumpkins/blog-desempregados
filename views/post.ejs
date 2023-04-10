@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= post.titulo %> - Meu Blog</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main class="main">
+    <div class="post">
+      <h1 class="title"><%= post.titulo %></h1>
+            
+      <p class="date">Criado em <%= post.data_criacao.replace('T', ' ').slice(0, -5) %></p>
+      <p class="date">Última modificação em <%= post.data_modificacao.replace('T', ' ').slice(0, -5) %></p>
+      <div class="content">
+        <%- post.conteudo %>
+      </div>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>
